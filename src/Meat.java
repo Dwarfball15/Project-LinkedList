@@ -1,4 +1,3 @@
-
 public class Meat {
 
     private String name;    // name of the meat cut
@@ -25,7 +24,7 @@ public class Meat {
         return price;
     }
 
-    // Return
+    // Return formatted string
     @Override
     public String toString() {
         return String.format("%-10s | Weight: %.1f lbs | Price: $%.2f/lb | Total: $%.2f",

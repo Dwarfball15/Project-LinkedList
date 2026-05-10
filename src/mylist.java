@@ -1,4 +1,3 @@
-
 import java.util.NoSuchElementException;
 
 public class mylist<T> {
