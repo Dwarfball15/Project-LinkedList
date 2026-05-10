@@ -7,8 +7,6 @@
  * Date: May 2026
  */
 
-
-
 public class LinkedListDemo {
 
     public static void main(String[] args) {
@@ -19,50 +17,105 @@ public class LinkedListDemo {
         Meat m2 = new Meat("Chicken", 5.0, 3.49);
         Meat m3 = new Meat("Pork", 8.0, 4.29);
 
+        // -------------------------------------------------------
+        // Insert items and show initial list
+        // -------------------------------------------------------
         list.insertAtBack(m1);
         list.insertAtBack(m2);
         list.insertAtBack(m3);
 
-        System.out.println("\n--- Initial List ---");
+        System.out.println("--- Initial List ---");
         list.print();
 
-        System.out.println("\n--- Remove From Back ---");
+        // -------------------------------------------------------
+        // Remove from back (Req 3)
+        // -------------------------------------------------------
+        System.out.println("--- Remove From Back ---");
         System.out.println("Before:");
         list.print();
         list.removeFromBack();
         System.out.println("After:");
         list.print();
 
-        System.out.println("\n--- Search By Index (1) ---");
+        // -------------------------------------------------------
+        // Search / display by index (Req 4)
+        // -------------------------------------------------------
+        System.out.println("--- Search By Index (valid: index 1) ---");
         try {
             System.out.println("Found: " + list.getAtIndex(1));
-        } catch (Exception e) {
-            System.out.println("Invalid index.");
+            System.out.println();
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Exception: " + e.getMessage());
         }
 
-        System.out.println("\n--- Remove At Index (0) ---");
+        System.out.println("--- Search By Index (invalid: index 99) ---");
+        try {
+            System.out.println("Found: " + list.getAtIndex(99));
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Caught expected exception: " + e.getMessage());
+            System.out.println();
+        }
+
+        // -------------------------------------------------------
+        // Remove at index (Req 5)
+        // -------------------------------------------------------
+        System.out.println("--- Remove At Index (valid: index 0) ---");
         System.out.println("Before:");
         list.print();
         list.removeAtIndex(0);
         System.out.println("After:");
         list.print();
 
-        System.out.println("\n--- Remove From Front ---");
+        System.out.println("--- Remove At Index (invalid: index -1) ---");
+        try {
+            list.removeAtIndex(-1);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Caught expected exception: " + e.getMessage());
+            System.out.println();
+        }
+
+        // -------------------------------------------------------
+        // Remove from front (provided method)
+        // -------------------------------------------------------
+        System.out.println("--- Remove From Front ---");
         System.out.println("Before:");
         list.print();
         list.removeFromFront();
         System.out.println("After:");
         list.print();
 
-        System.out.println("\n--- Clear List ---");
+        // -------------------------------------------------------
+        // Clear (Req 8)
+        // -------------------------------------------------------
+        System.out.println("--- Clear List ---");
+        list.insertAtBack(new Meat("Lamb", 3.0, 8.99));   // re-add an item to show clear working
+        System.out.println("Before:");
+        list.print();
         list.clear();
+        System.out.println("After clear:");
         list.print();
 
-        System.out.println("\n--- Exception Tests ---");
-        try { list.removeFromBack(); }
-        catch (Exception e) { System.out.println("removeFromBack on empty list."); }
+        // -------------------------------------------------------
+        // Empty-list exception tests (Req 3 & removeFromFront)
+        // -------------------------------------------------------
+        System.out.println("--- Exception Tests on Empty List ---");
 
-        try { list.removeFromFront(); }
-        catch (Exception e) { System.out.println("removeFromFront on empty list."); }
+        try {
+            list.removeFromBack();
+        } catch (Exception e) {
+            System.out.println("removeFromBack on empty list: " + e.getMessage());
+        }
+
+        try {
+            list.removeFromFront();
+        } catch (Exception e) {
+            System.out.println("removeFromFront on empty list: " + e.getMessage());
+        }
+
+        try {
+            list.getAtIndex(0);
+        } catch (Exception e) {
+            System.out.println("getAtIndex on empty list: " + e.getMessage());
+        }
     }
 }

@@ -10,7 +10,7 @@ public class ListNode<T> {
 
     // Constructor: creates a ListNode with data and a next pointer
     ListNode(T object, ListNode<T> node) {
-        data    = object;
+        data = object;
         nextNode = node;
     }
 
