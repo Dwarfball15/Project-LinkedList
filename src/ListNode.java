@@ -1,12 +1,3 @@
-// ============================================================
-// File:    ListNode.java
-// Author:  Eric
-// Course:  IS 247
-// Purpose: Generic node class for a circular linked list.
-//          Each node holds a data item and a reference to
-//          the next node in the list.
-// ============================================================
-
 public class ListNode<T> {
 
     T data;                   // data stored in this node
