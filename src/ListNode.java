@@ -1,25 +1,25 @@
 public class ListNode<T> {
 
-    T data;                   // data stored in this node
-    ListNode<T> nextNode;     // reference to the next node
+    T data;
+    ListNode<T> nextNode;
 
-    // Constructor: creates a ListNode that refers to object only
+    // Constructor
     ListNode(T object) {
         this(object, null);
     }
 
-    // Constructor: creates a ListNode with data and a next pointer
+    // Constructor
     ListNode(T object, ListNode<T> node) {
         data = object;
         nextNode = node;
     }
 
-    // Returns the data stored in this node
+    // Return
     T getData() {
         return data;
     }
 
-    // Returns a reference to the next node
+    // Return
     ListNode<T> getNext() {
         return nextNode;
     }

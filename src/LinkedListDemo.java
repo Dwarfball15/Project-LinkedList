@@ -17,9 +17,9 @@ public class LinkedListDemo {
         Meat m2 = new Meat("Chicken", 5.0, 3.49);
         Meat m3 = new Meat("Pork", 8.0, 4.29);
 
-        // -------------------------------------------------------
+
         // Insert items and show initial list
-        // -------------------------------------------------------
+
         list.insertAtBack(m1);
         list.insertAtBack(m2);
         list.insertAtBack(m3);
@@ -27,9 +27,9 @@ public class LinkedListDemo {
         System.out.println("--- Initial List ---");
         list.print();
 
-        // -------------------------------------------------------
+
         // Remove from back (Req 3)
-        // -------------------------------------------------------
+
         System.out.println("--- Remove From Back ---");
         System.out.println("Before:");
         list.print();
@@ -37,9 +37,9 @@ public class LinkedListDemo {
         System.out.println("After:");
         list.print();
 
-        // -------------------------------------------------------
-        // Search / display by index (Req 4)
-        // -------------------------------------------------------
+
+        // Search / display by index
+
         System.out.println("--- Search By Index (valid: index 1) ---");
         try {
             System.out.println("Found: " + list.getAtIndex(1));
@@ -56,9 +56,9 @@ public class LinkedListDemo {
             System.out.println();
         }
 
-        // -------------------------------------------------------
+
         // Remove at index (Req 5)
-        // -------------------------------------------------------
+
         System.out.println("--- Remove At Index (valid: index 0) ---");
         System.out.println("Before:");
         list.print();
@@ -74,9 +74,9 @@ public class LinkedListDemo {
             System.out.println();
         }
 
-        // -------------------------------------------------------
+
         // Remove from front (provided method)
-        // -------------------------------------------------------
+
         System.out.println("--- Remove From Front ---");
         System.out.println("Before:");
         list.print();
@@ -84,9 +84,9 @@ public class LinkedListDemo {
         System.out.println("After:");
         list.print();
 
-        // -------------------------------------------------------
-        // Clear (Req 8)
-        // -------------------------------------------------------
+
+        // Clear
+
         System.out.println("--- Clear List ---");
         list.insertAtBack(new Meat("Lamb", 3.0, 8.99));   // re-add an item to show clear working
         System.out.println("Before:");
@@ -95,9 +95,9 @@ public class LinkedListDemo {
         System.out.println("After clear:");
         list.print();
 
-        // -------------------------------------------------------
-        // Empty-list exception tests (Req 3 & removeFromFront)
-        // -------------------------------------------------------
+
+        // Empty-list exception tests
+
         System.out.println("--- Exception Tests on Empty List ---");
 
         try {

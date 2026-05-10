@@ -5,7 +5,7 @@ public class Meat {
     private double weight;  // weight in pounds
     private double price;   // price per pound in USD
 
-    // Parameterized constructor
+    // Constructor
     public Meat(String name, double weight, double price) {
         this.name = name;
         this.weight = weight;
@@ -25,7 +25,7 @@ public class Meat {
         return price;
     }
 
-    // Returns a nicely formatted string representation of the meat item
+    // Return
     @Override
     public String toString() {
         return String.format("%-10s | Weight: %.1f lbs | Price: $%.2f/lb | Total: $%.2f",

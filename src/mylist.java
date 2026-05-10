@@ -137,7 +137,7 @@ public class mylist<T> {
         first = last = null;
     }
 
-    // Prints all items using each item's toString(), with index and total count
+    // Prints
     public void print() {
         if (isEmpty()) {
             System.out.println(name + " is empty.");
@@ -153,7 +153,7 @@ public class mylist<T> {
             System.out.println("  [" + index + "] " + current.data.toString());
             current = current.nextNode;
             index++;
-        } while (current != first);            // circular: stop when we loop back to head
+        } while (current != first);            // circular
 
         System.out.println();
     }
