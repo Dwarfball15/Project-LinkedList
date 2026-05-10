@@ -2,8 +2,8 @@ import java.util.NoSuchElementException;
 
 public class mylist<T> {
 
-    private ListNode<T> first;  // reference to the first node
-    private ListNode<T> last;   // reference to the last node
+    private ListNode<T> first;  // ref to the first node
+    private ListNode<T> last;   // ref to the last node
     private String name;        // label used when printing
 
     // Constructor: creates an empty named list

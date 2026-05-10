@@ -28,7 +28,7 @@ public class LinkedListDemo {
         list.print();
 
 
-        // Remove from back (Req 3)
+        // Remove from back
 
         System.out.println("--- Remove From Back ---");
         System.out.println("Before:");
@@ -57,7 +57,7 @@ public class LinkedListDemo {
         }
 
 
-        // Remove at index (Req 5)
+        // Remove at index
 
         System.out.println("--- Remove At Index (valid: index 0) ---");
         System.out.println("Before:");
